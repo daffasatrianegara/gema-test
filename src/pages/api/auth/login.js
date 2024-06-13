@@ -29,10 +29,10 @@ const handler = async (req, res) => {
             throw new Error(401)
         }
 
-        // const checkPassword = bcrypt.compareSync(password, user.password)
-        // if(!checkPassword) {
-        //     throw new Error(401)
-        // }
+        const checkPassword = bcrypt.compareSync(password, user.password)
+        if(!checkPassword) {
+            throw new Error(401)
+        }
 
         const token = jwt.sign({ id: user.id }, secret_key)
         res.status(200).json({
