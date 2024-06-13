@@ -1,6 +1,9 @@
-import axios from "axios";
+const axios = require('axios')
+require("dotenv").config();
 
-const baseURL = "http://localhost:3000/api";
+const baseURL = process.env.BASE_URL || "http://localhost:3000/api";
+console.log(baseURL);
+
 const instance = axios.create({ baseURL });
 
 instance.interceptors.request.use((config) => {
@@ -11,4 +14,4 @@ instance.interceptors.request.use((config) => {
   return config;
 });
 
-export { instance };
+module.exports = { instance };
