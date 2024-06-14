@@ -10,6 +10,7 @@ import {
   updateTodos,
 } from "@/modules/fetch/todos";
 import formatDateTime from "@/utils/formatDateTime";
+import Head from "next/head";
 
 const TodosPage = () => {
   const [id, setId] = useState(null);
@@ -102,6 +103,9 @@ const TodosPage = () => {
 
   return (
     <>
+    <Head>
+      <title>Data Todo | TodosNow</title>
+    </Head>
       <LayoutSecond>
         <div className="flex flex-col justify-center items-center w-full">
           <p className="text-4xl font-bold">TodosNow</p>

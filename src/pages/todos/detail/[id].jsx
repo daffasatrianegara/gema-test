@@ -3,6 +3,7 @@ import { getDetailTodo } from "@/modules/fetch/todos";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import formatDateTime from "@/utils/formatDateTime";
+import Head from "next/head";
 
 const DetailTodo = () => {
   const router = useRouter();
@@ -34,6 +35,9 @@ const DetailTodo = () => {
 
   return (
     <>
+    <Head>
+      <title>Detail Todo | TodosNow</title>
+    </Head>
       <div className="w-full h-screen">
         <div className="absolute ml-5 mt-5">
           <p className="text-back" onClick={() => router.push("/todos")}>

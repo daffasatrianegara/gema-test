@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { login } from "@/modules/fetch/auth";
+import Head from "next/head";
 
 const LoginPage = () => {
   const [email, setEmail] = useState(null);
@@ -20,6 +21,9 @@ const LoginPage = () => {
   };
   return (
     <>
+    <Head>
+      <title>Login | TodosNow</title>
+    </Head>
       <div className="w-full h-screen">
         <div className="absolute ml-5 mt-5">
           <p className="text-back" onClick={() => router.push("/")}>

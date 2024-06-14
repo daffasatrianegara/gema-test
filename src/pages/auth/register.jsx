@@ -1,6 +1,7 @@
 import { register } from "@/modules/fetch/auth";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import Head from "next/head";
 
 const RegisterPage = () => {
     const [name, setName] = useState(null)
@@ -21,6 +22,9 @@ const RegisterPage = () => {
 
   return (
     <>
+    <Head>
+      <title>Register | TodosNow</title>
+    </Head>
       <div className="w-full h-screen">
         <div className="absolute mt-5 ml-5">
           <p className="text-back" onClick={() => router.push("/")}>
