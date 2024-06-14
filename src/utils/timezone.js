@@ -1,14 +1,14 @@
-const dayjs = require('dayjs');
-const timezone = require('dayjs/plugin/timezone');
-const utc = require('dayjs/plugin/utc');
+const dayjs = require("dayjs");
+const timezone = require("dayjs/plugin/timezone");
+const utc = require("dayjs/plugin/utc");
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
-dayjs.tz.setDefault("Asia/Jakarta");
 
 const dateFormat = () => {
-    const date = dayjs().tz().toISOString(); 
-    return date;
-}
+  const date = dayjs().tz("Asia/Jakarta");
+  const formattedDate = date.format()
+  return formattedDate;
+};
 
-module.exports = dateFormat;
+module.exports = dateFormat

@@ -12,6 +12,7 @@ const login = async (email, password) => {
 const register = async (name, email, password) => {
   try {
     const response = await instance.post("/auth/register", { name, email, password })
+    return response.data
   } catch (err) {
     throw new Error(err.response.data.message || "Something went wrong");
   }
