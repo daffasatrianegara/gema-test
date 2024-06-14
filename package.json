@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "migrate": "prisma migrate dev --name init",
-    "time": "node ./src/utils/timezone.js"
+    "time": "node ./src/utils/timezone.js",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@prisma/client": "^5.15.0",
