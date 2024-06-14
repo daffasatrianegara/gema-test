@@ -3,7 +3,7 @@ const bcrypt = require("bcryptjs")
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
 
-const secret_key = process.env.JWT_SECRET || "koderahasianegara";
+const secret_key = process.env.NEXT_PUBLIC_JWT_SECRET || "koderahasianegara";
 const prisma = new PrismaClient();
 
 if (prisma) {
