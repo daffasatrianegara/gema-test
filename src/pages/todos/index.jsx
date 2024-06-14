@@ -11,7 +11,7 @@ import {
 } from "@/modules/fetch/todos";
 import formatDateTime from "@/utils/formatDateTime";
 
-const todosPage = () => {
+const TodosPage = () => {
   const [id, setId] = useState(null);
   const [idTodo, setIdTodo] = useState(null)
   const [todo, setTodo] = useState(null);
@@ -100,7 +100,6 @@ const todosPage = () => {
     }
   };
 
-  console.log(dataTodos);
   return (
     <>
       <LayoutSecond>
@@ -226,4 +225,4 @@ const todosPage = () => {
   );
 };
 
-export default todosPage;
+export default TodosPage;

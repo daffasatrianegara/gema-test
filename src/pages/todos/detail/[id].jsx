@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import formatDateTime from "@/utils/formatDateTime";
 
-const detailTodo = () => {
+const DetailTodo = () => {
   const router = useRouter();
   const { id } = router.query;
   const [todo, setTodo] = useState(null);
@@ -60,4 +60,4 @@ const detailTodo = () => {
   );
 };
 
-export default detailTodo;
+export default DetailTodo;
