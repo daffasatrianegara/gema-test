@@ -1,7 +1,7 @@
 const axios = require('axios')
 require("dotenv").config();
 
-const baseURL = process.env.BASE_URL || "http://localhost:3000/api";
+const baseURL = process.env.BASE_URL || "https://gema-test.vercel.app/api";
 console.log(baseURL);
 
 const instance = axios.create({ baseURL });
